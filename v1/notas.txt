@@ -1,0 +1,9 @@
+a barra central, quando esticada na horizontal, não está no meio, está um pouco mais para 
+cima (em 'top') propositalmente para se ajustar ao desenho das caixas (das 'div's)
+
+-barra central - funcionando
+-alternar entre 2 colunas e 2 linhas na visualização da janela - funcionando
+
+
+esta versão é apenas visual, ainda não é funcional para o propósito que está sendo 
+elaborada.
