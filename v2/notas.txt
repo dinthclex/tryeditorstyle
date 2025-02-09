@@ -1,0 +1,58 @@
+sobre a versão v1:
+a barra central, quando esticada na horizontal, não está no meio, está um pouco mais para 
+cima (em 'top') propositalmente para se ajustar ao desenho das caixas (das 'div's)
+
+-barra funcionando
+-alternar entre 2 colunas e 2 linhas de visualização da janela funcionando
+
+
+
+novidades nesta versão (v2):
+-acrescentado o CodeMirror
+
+
+
+
+
+
+
+/* Sobre o tryitstyle
+
+ideia:
+1 adicionar iframe id="iframeResult", se não havia ainda
+2 carregar CodeMirror
+	2.1 se não puder:
+		a. avisar como resolver
+		b. adicionar textarea, se não havia ainda
+
+descrição:
+duas caixas (divs):
+	a caixa da esquerda para escrever o código;
+	a caixa da direita para ver o resultado
+
+modo de utilização:
+	ao inserir o código, no editor, que fica no lado esquerdo,
+	apertar o botão 'rodar'
+	visualizar o código, no resultado, que fica no lado direito.
+	
+desenvolvimento:
+	-1 fazer duas caixas
+	-2 fazer uma barra (barra central) que controle o tamanho das caixas simultaneamente
+	-3 um botão para fazer o código rodar
+		a. chama uma função que pega o .innerText da div que está o código
+		e atribui ao srcdoc do iframe da caixa da esquerda (a caixa de visualização ou resultado)
+*/
+
+
+<!--
+a simplicidade está aqui:
+JavaScript:
+let str = document.querySelector("elemento-onde-esta-o-codigo-texto").innerText; // (1)
+
+document.getElementsById("iframe-que-deseja-colocar-o-codigo").srcdoc = str; // (2)
+
+HTML:
+resumo:
+<div id="myCodeEditor"><h1>Olá Mundo.</h1></div>  <!-- (1) -->
+<iframe srcdoc=""></iframe>  <!-- (2) -->
+-->

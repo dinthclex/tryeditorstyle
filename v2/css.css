@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#container {
+	width: 100%;
+	position: absolute;
+	top:150px;
+	bottom: 0;
+	overflow: auto;
+	background-color: #eeeeee;
+}
+
+#textareacontainer, #iframecontainer {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#textarea, #iframe {
+	width: 100%;
+	height: 100%;
+	padding-top: 1px;
+	padding-bottom: 10px;
+}
+#textarea.horizontal, #iframe.horizontal {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#textarea {
+	//background-color: Red;
+	padding-left: 10px;
+	padding-right: 5px;
+	overflow: auto;
+}
+
+#iframe {
+	//background-color: Green;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+#textareawrapper, #iframewrapper {
+	width: 100%;
+	height: 100%;
+	background-color: White;
+	box-shadow: 0px 1px 3px rgba(0,0,0, 0.2);
+}
+
+#dragbar {
+	position: absolute;
+	top: 150px;
+	left: 400px;
+	//background-color: rgba(0,0,255,0.3);
+	width: 10px;
+	height: 300px;
+	z-index: 1;
+	cursor: col-resize;
+}
+
+#shield {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	//background-color: rgba(0,255,255,0.1);
+	z-index: 5;
+}
+
+.topnav {
+	position: absolute;
+	top: 100px;
+	height: 50px;
+	width: 100%;
+	background-color: #eeeeee;
+	//min-width: 360px;
+}
+
+#resultsize {
+	float: right;
+	padding: 14px 10px 14px 0;
+	font-size: 1.1rem;
+}
+#redirbutton {
+	float: left;
+	cursor: pointer;
+	padding: 15px;
+}
+#redirbutton:hover {
+	background-color: rgba(0,0,0,0.1);
+}

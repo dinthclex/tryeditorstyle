@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Pessoal -->
+		<link rel="stylesheet" href="css.css"/>
+		<script src="js.js"></script>
+		<link rel="stylesheet" href="run.css"/>
+		<script src="run.js"></script>
+		
+		<!-- CodeMirror - https://codemirror.net/5/ -->
+		<script src="lib/codemirror.js"></script>
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<!-- Codemirror - tudo para funcionar JavaScript, CSS e HTML -->
+		<script src="mode/xml/xml.js"></script>
+		<script src="mode/javascript/javascript.js"></script>
+		<script src="mode/css/css.js"></script>
+		<script src="mode/htmlmixed/htmlmixed.js"></script>
+	</head>
+	<body>
+		<div class="topnav">
+			<div id="redirbutton">| ou --</div>
+			<button id="runbtn">rodar</button>
+			<div id="resultsize"></div>
+		</div>
+		<div id="shield"></div>
+		<div id="dragbar"></div>
+		<div id="container">
+			<div id="textareacontainer">
+				<div id="textarea">
+					<div id="textareawrapper">
+					</div>
+				</div>
+			</div>
+			<div id="iframecontainer">
+				<div id="iframe">
+					<div id="iframewrapper">
+						<iframe id="iframeResult">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		var editor = CodeMirror(document.getElementById("textareawrapper"), {
+		  value: "<h1></h1><h1>CodeMirror</h1>",
+		  mode:  "htmlmixed",
+		  lineWrapping: true,//habilita quebra de linha automática
+		  indentWithTabs: true
+		});
+		</script>
+	</body>
+</html>
